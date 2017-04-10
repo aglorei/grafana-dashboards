@@ -1103,7 +1103,7 @@
           "thresholds": [],
           "timeFrom": null,
           "timeShift": null,
-          "title": "Throughput Rx Per Host",
+          "title": "Throughput Rx Per Project",
           "tooltip": {
             "shared": true,
             "sort": 0,

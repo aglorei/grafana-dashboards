@@ -107,6 +107,12 @@
                   "key": "machine",
                   "operator": "=~",
                   "value": "/^$host$/"
+                },
+                {
+                  "condition": "AND",
+                  "key": "container_name",
+                  "operator": "=",
+                  "value": "/"
                 }
               ]
             }
@@ -358,6 +364,12 @@
                   "key": "machine",
                   "operator": "=~",
                   "value": "/^$host$/"
+                },
+                {
+                  "condition": "AND",
+                  "key": "container_name",
+                  "operator": "=",
+                  "value": "/"
                 }
               ]
             }
@@ -608,6 +620,12 @@
                   "key": "machine",
                   "operator": "=~",
                   "value": "/^$host$/"
+                },
+                {
+                  "condition": "AND",
+                  "key": "container_name",
+                  "operator": "=",
+                  "value": "/"
                 }
               ]
             }
@@ -733,6 +751,12 @@
                   "key": "machine",
                   "operator": "=~",
                   "value": "/^$host$/"
+                },
+                {
+                  "condition": "AND",
+                  "key": "container_name",
+                  "operator": "=",
+                  "value": "/"
                 }
               ]
             }
@@ -983,6 +1007,12 @@
                   "key": "machine",
                   "operator": "=~",
                   "value": "/^$host$/"
+                },
+                {
+                  "condition": "AND",
+                  "key": "container_name",
+                  "operator": "=",
+                  "value": "/"
                 }
               ]
             }

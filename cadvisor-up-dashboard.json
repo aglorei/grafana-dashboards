@@ -187,13 +187,13 @@
                 },
                 {
                   "params": [
-                    "com.docker.compose.project"
+                    "machine"
                   ],
                   "type": "tag"
                 },
                 {
                   "params": [
-                    "machine"
+                    "com.docker.compose.service"
                   ],
                   "type": "tag"
                 },
@@ -230,9 +230,9 @@
               ],
               "tags": [
                 {
-                  "key": "com.docker.compose.project",
+                  "key": "com.docker.compose.service",
                   "operator": "=~",
-                  "value": "/^$project$/"
+                  "value": "/^$service$/"
                 }
               ]
             }
@@ -240,7 +240,7 @@
           "thresholds": [],
           "timeFrom": null,
           "timeShift": null,
-          "title": "Total CPU Usage Per Project",
+          "title": "Total CPU Usage Per Service",
           "tooltip": {
             "shared": true,
             "sort": 0,
@@ -443,7 +443,7 @@
                 },
                 {
                   "params": [
-                    "com.docker.compose.project"
+                    "com.docker.compose.service"
                   ],
                   "type": "tag"
                 },
@@ -480,9 +480,9 @@
                 },
                 {
                   "condition": "AND",
-                  "key": "com.docker.compose.project",
+                  "key": "com.docker.compose.service",
                   "operator": "=~",
-                  "value": "/^$project$/"
+                  "value": "/^$service$/"
                 }
               ]
             }
@@ -490,7 +490,7 @@
           "thresholds": [],
           "timeFrom": null,
           "timeShift": null,
-          "title": "Memory Usage Per Project",
+          "title": "Memory Usage Per Service",
           "tooltip": {
             "shared": true,
             "sort": 0,
@@ -818,7 +818,7 @@
                 },
                 {
                   "params": [
-                    "com.docker.compose.project"
+                    "com.docker.compose.service"
                   ],
                   "type": "tag"
                 },
@@ -855,9 +855,9 @@
                 },
                 {
                   "condition": "AND",
-                  "key": "com.docker.compose.project",
+                  "key": "com.docker.compose.service",
                   "operator": "=~",
-                  "value": "/^$project$/"
+                  "value": "/^$service$/"
                 }
               ]
             }
@@ -865,7 +865,7 @@
           "thresholds": [],
           "timeFrom": null,
           "timeShift": null,
-          "title": "Throughput Tx Per Project",
+          "title": "Throughput Tx Per Service",
           "tooltip": {
             "shared": true,
             "sort": 0,
@@ -1068,7 +1068,7 @@
                 },
                 {
                   "params": [
-                    "com.docker.compose.project"
+                    "com.docker.compose.service"
                   ],
                   "type": "tag"
                 },
@@ -1105,9 +1105,9 @@
                 },
                 {
                   "condition": "AND",
-                  "key": "com.docker.compose.project",
+                  "key": "com.docker.compose.service",
                   "operator": "=~",
-                  "value": "/^$project$/"
+                  "value": "/^$service$/"
                 }
               ]
             }
@@ -1115,7 +1115,7 @@
           "thresholds": [],
           "timeFrom": null,
           "timeShift": null,
-          "title": "Throughput Rx Per Project",
+          "title": "Throughput Rx Per Service",
           "tooltip": {
             "shared": true,
             "sort": 0,
@@ -1224,9 +1224,9 @@
         "includeAll": true,
         "label": null,
         "multi": true,
-        "name": "project",
+        "name": "service",
         "options": [],
-        "query": "SHOW TAG VALUES FROM \"$retention_policy\".\"memory_usage\" WITH KEY = \"com.docker.compose.project\"",
+        "query": "SHOW TAG VALUES FROM \"$retention_policy\".\"memory_usage\" WITH KEY = \"com.docker.compose.service\" WHERE machine =~ /^$host$/",
         "refresh": 1,
         "regex": "",
         "sort": 0,
